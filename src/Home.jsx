@@ -7,7 +7,7 @@ function Home() {
     <div className="home-container">
       {/* Navbar */}
       <header className="navbar">
-        <div className="logo">EduCycle</div>
+        <div className="logo"><span className="highlight">EduCycle</span></div>
         <nav className="nav-links">
           <a href="#home">Home</a>
           <a href="#features">Features</a>
