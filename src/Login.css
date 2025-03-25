@@ -1,0 +1,160 @@
+/* Base Reset and Fullscreen Setup */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Container */
+.login-container {
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Login Box */
+.login-box {
+  background-color: #2c2c2c;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 25px #00ffcc88;
+  max-width: 420px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 0 30px #00ffcc;
+}
+
+/* Logo */
+.logo {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Titles */
+.login-title {
+  color: #00ffcc;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1.2rem;
+}
+
+/* Margin only when not inside wrapper */
+.login-form > .input-field {
+  margin-bottom: 1.5rem;
+}
+
+.input-field::placeholder {
+  color: #bbb;
+}
+
+.input-field:focus {
+  outline: none;
+  border: 1px solid #00ffcc;
+}
+
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.password-wrapper .input-field {
+  padding-right: 44px; /* make space for eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+}
+.eye-icon:hover {
+  color: #00ffcc;
+}
+
+/* Button Styling */
+.login-button {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #00f7b9;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #00d9a3;
+  box-shadow: 0 0 12px #00f7b9aa;
+}
+
+/* Bottom Text */
+.signup-text {
+  color: #eee;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.signup-text a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+.success-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #00ffd5;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
