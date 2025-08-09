@@ -1,12 +1,68 @@
-# React + Vite
+# EduCycle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EduCycle is a sustainable reselling platform for students, allowing them to buy and sell second-hand educational materials, textbooks, electronics, and other college essentials.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse and search for items by category
+- List your own items for sale
+- Save items for later
+- Direct chat with buyers/sellers
+- User profiles with college verification
+- Responsive design for all devices
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/educycle.git
+cd educycle
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Project Structure
+
+- `src/` - Source code
+  - `components/` - React components
+  - `utils/` - Utility functions and API helpers
+  - `dummyData.js` - Mock data for development
+  - `App.jsx` - Main application component
+  - `main.jsx` - Entry point
+
+## Technologies Used
+
+- React
+- React Router
+- Vite
+- CSS
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+- Images from [Unsplash](https://unsplash.com/)

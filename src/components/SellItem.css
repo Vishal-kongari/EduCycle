@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset and Base Styles */
+body,
+html,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f9fafb, #f0fdf4);
+    color: #1f2937;
+}
+
+/* Container */
+.sell-item-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f7ff, #e8fff3);
+}
+
+/* Form Box */
+.sell-item-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Logo and Titles */
+.sell-item-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.sell-item-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #3b82f6, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.sell-item-header h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, #3b82f6, #10b981);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.sell-item-header p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Form Groups */
+.form-section {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Input Fields */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    color: #1f2937;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background-color: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Category Select */
+.category-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    color: #1f2937;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.category-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background-color: #ffffff;
+}
+
+.category-select:hover {
+    border-color: #3b82f6;
+    background-color: #f0f7ff;
+}
+
+/* Condition Group */
+.condition-group,
+.condition-option {
+    display: none;
+}
+
+/* Price Input */
+.price-input {
+    position: relative;
+}
+
+.price-input::before {
+    content: '₹';
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+.price-input input {
+    padding-left: 1.75rem !important;
+}
+
+/* Image Upload */
+.image-upload {
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+}
+
+.image-upload:hover {
+    border-color: #3b82f6;
+    background-color: #f0f7ff;
+}
+
+.image-upload input[type="file"] {
+    display: none;
+}
+
+.image-upload-icon {
+    font-size: 2rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.image-upload-text {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.image-preview {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(45deg, #3b82f6, #10b981);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Messages */
+.error-message {
+    color: #ef4444;
+    background-color: #fee2e2;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.success-message {
+    color: #10b981;
+    background-color: #d1fae5;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sell-item-container {
+        padding: 1rem;
+    }
+
+    .sell-item-form {
+        padding: 1.5rem;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+    .condition-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sell-item-header {
+        margin-bottom: 2rem;
+    }
+
+    .sell-item-header h2 {
+        font-size: 2rem;
+    }
+
+    .sell-item-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sell-item-form {
+        padding: 1rem;
+    }
+
+    .sell-item-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .sell-item-header h2::after {
+        width: 40px;
+        height: 3px;
+    }
+}
+
+/* Modern Sell Item Form Styles */
+.sell-item-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sell-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sell-item-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sell-item-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.sell-item-header p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.category-select {
+    width: 100%;
+    background-color: white;
+}
+
+.condition-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+}
+
+.condition-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.condition-option input[type="radio"] {
+    accent-color: #3498db;
+}
+
+.price-input {
+    position: relative;
+}
+
+.price-input::before {
+    content: '₹';
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+.price-input input {
+    padding-left: 1.75rem !important;
+}
+
+.image-upload {
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.image-upload:hover {
+    border-color: #3498db;
+}
+
+.image-upload input[type="file"] {
+    display: none;
+}
+
+.image-upload-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.image-upload-text {
+    color: #7f8c8d;
+}
+
+.image-preview {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.submit-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #00b894;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .sell-item-container {
+        padding: 1rem;
+    }
+
+    .sell-item-form {
+        padding: 1.5rem;
+    }
+
+    .sell-item-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .condition-group {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Tags Input */
+.tags-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 0.5rem;
+    min-height: 45px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #eff6ff;
+    color: #2563eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.tag-remove {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.tags-input input {
+    border: none;
+    outline: none;
+    padding: 0.25rem;
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Form Section Dividers */
+.form-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.form-section-title {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
