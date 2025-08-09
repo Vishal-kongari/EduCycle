@@ -22,7 +22,7 @@ EduCycle is a sustainable reselling platform for students, allowing them to buy 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/educycle.git
+git clone https://github.com/Vishal-kongari/EduCycle
 
 ```
 
