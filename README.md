@@ -23,7 +23,7 @@ EduCycle is a sustainable reselling platform for students, allowing them to buy 
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/educycle.git
-cd educycle
+
 ```
 
 2. Install dependencies:
@@ -39,8 +39,12 @@ npm run dev
 # or
 yarn dev
 ```
+4. Run Backend server:
+```bash
+node server.js
+```
 
-4. Open your browser and navigate to `http://localhost:3000`
+5. Open your browser and navigate to `http://localhost:3000`
 
 ## Project Structure
 
